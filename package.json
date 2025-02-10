@@ -4,12 +4,17 @@
   "description": "",
   "main": "caso-de-prueba-1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generar-reporte": "allure generate allure-results -o allure-report --clean"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.0.2"
+    "cypress": "^12.3.0"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.32.2",
+    "curso-cypress": "file:"
   }
 }
