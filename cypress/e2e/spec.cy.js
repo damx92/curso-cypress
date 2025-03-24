@@ -1,3 +1,4 @@
+import { HomeMethods } from "./pages/home/home.methods"
 import { LoginMethods } from "./pages/login/login.methods"
 
 describe('template spec', () => {
@@ -5,9 +6,8 @@ describe('template spec', () => {
     const usuario = 'shoppingcart'
     const contrasena = 'shop23'
     cy.visit('https://www.demoblaze.com/')
-    cy.get('a[data-target="#logInModal"]').click()
-   LoginMethods.login(usuario, contrasena)
+   HomeMethods.clickOnProductLink('Iphone 6 32gb')
+   cy.wait(20000)
   
-   cy.wait(10000)
   })
 })
