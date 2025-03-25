@@ -1,0 +1,27 @@
+{
+  "name": "curso-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caso-de-prueba-1.js",
+  "scripts": {
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "cypress run --headed --env allure=true",
+    "generar-reporte": "allure generate allure-results -o allure-report --clean",
+    "abrir-report": "allure open",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-cypress": "^3.1.0",
+    "cypress": "^14.0.3"
+  },
+  "dependencies": {
+    "@mmisty/cypress-allure-adapter": "^3.2.3",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.32.2",
+    "curso-cypress": "file:",
+    "rimraf": "^6.0.1"
+  }
+}
